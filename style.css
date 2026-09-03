@@ -4,19 +4,16 @@ I need to update descriptions and source paths to match my project, but the stru
 */
 
 /**
-Globals – global variables that are used throughout the project.
-This layer is used to set up the project’s color palette, typography, spacing,
+Variables – variables that are used throughout the project.
+This layer is used to set up the project’s typography, spacing,
 and other values that are used throughout the project.
 */
-@import url("src\assets\global.css");
+@import url("src/assets/css/styles/variables.css");
 
 /**
-Semantics – styles that are applied to elements directly. No classes or IDs in
-this layer. This layer is the most foundational and is used to set up the base
-styles for the project and serve as a starting point for all components and
-layouts.
+Color – this layer is used to set up the project’s color palette. It is used to define the colors that are used throughout the project.
 */
-@import url("src\assets\semantic.css");
+@import url("src/assets/css/styles/color/index.css");
 
 /**
 Components – styles that are applied to classes and IDs. This layer is used
@@ -24,9 +21,9 @@ to style individual components and is where the majority of the project’s
 styling is done. However if the job is done correctly in the defaults layer,
 this layer should be relatively easy to style.
 */
-@import url("./src/assets/css/components/index.css");
+@import url("src/assets/css/components/index.css");
 
 /**
 Utilities – single-purpose classes that are used to apply styles to elements.
 */
-@import url("src\assets\utilities.css");
+@import url("src/assets/css/styles/utilities.css");

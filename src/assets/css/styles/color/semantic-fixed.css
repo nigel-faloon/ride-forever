@@ -1,0 +1,10 @@
+/* Use fixed semantic colors on parts of the UI you want 'fixed' (unchanged) when swapping light/dark themes */
+
+:root {
+
+--color-fixed--background-dark: var(--color--black);
+--color-fixed--foreground-ondark: var(--color--white);
+--color-fixed--foreground-ondark-secondary: var(--color--alpha-white-88);
+--color-fixed--foreground-ondark-tertiary: var(--color--alpha-white-72);
+
+}

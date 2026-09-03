@@ -10,11 +10,11 @@
 }
 
 .button .brand-solid {
-    background-color: var(--color-background-brand-primary);
+    background-color: var(--color--background-brand-primary);
 }
 
 .button .neutral-solid {
-    background-color: var(--color-background-primary);
+    background-color: var(--color--background-primary);
 }
 
 /* Base button */
@@ -22,10 +22,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-100);
+  gap: var(--space--100);
 
   min-height: 2.75rem;
-  padding: 0 var(--space-4);
+  padding: 0 var(--space--4);
 
   border: 1px solid transparent;
   border-radius: var(--radius-md);
