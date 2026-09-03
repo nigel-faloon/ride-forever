@@ -1,0 +1,35 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 20px 24px;
+  border: none;
+  border-radius: var(--button--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button .brand-solid {
+    background-color: var(--color-background-brand-primary);
+}
+
+.button .neutral-solid {
+    background-color: var(--color-background-primary);
+}
+
+/* Base button */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-100);
+
+  min-height: 2.75rem;
+  padding: 0 var(--space-4);
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+
+  font: var(--text-label-md);
+  cursor: pointer;
+}

@@ -1,0 +1,203 @@
+:root {
+
+/* SPACING */ 
+
+--space-1px: 1px;
+--space-0: 0px;
+--space-025: 2px;
+--space-050: 4px;
+--space-075: 6px;
+--space-100: 8px;
+--space-125: 10px;
+--space-150: 12px;
+--space-200: 16px;
+--space-250: 20px;
+--space-300: 24px;
+--space-400: 32px;
+--space-500: 40px;
+--space-600: 48px;
+--space-800: 64px;
+--space-1000: 80px;
+--space-1200: 96px;
+--space-1400: 112px;
+
+/* GRID */
+
+/* LAYOUT */
+
+/* BORDER */
+
+/* border-radius - 100s scale uses 8px as base unit */
+--border-radius-0: 0;
+--border-radius-025: 2px;
+--border-radius-033: 3px;
+--border-radius-050: 4px;
+--border-radius-075: 6px;
+--border-radius-100: 8px;
+--border-radius-125: 10px;
+--border-radius-150: 12px;
+--border-radius-200: 16px;
+--border-radius-300: 24px;
+--border-radius-400: 32px;
+--border-radius-800: 64px;
+--border-radius-round: 9999px;
+
+/* border-width */
+--border-width-100: 1;
+--border-width-200: 2;
+--border-width-300: 3;
+--border-width-400: 4;
+--border-width-500: 8;
+
+/* TYPOGRAPHY */
+
+/* font-family */
+--font-family-sans: "Satoshi-Variable", "Helvetica Neue", Helvetica, Arial, system-ui, -apple-system, BlinkMacSystemFont, sans-serif, sans-serif;
+
+/* font-size */
+--font-scale-10: 10;
+--font-scale-12: 12;
+--font-scale-14: 14;
+--font-scale-16: 16;
+--font-scale-18: 18;
+--font-scale-20: 20;
+--font-scale-22: 22;
+--font-scale-24: 24;
+--font-scale-28: 28;
+--font-scale-32: 32;
+--font-scale-36: 36;
+--font-scale-40: 40;
+--font-scale-44: 44;
+--font-scale-48: 48;
+--font-scale-52: 52;
+--font-scale-56: 56;
+--font-scale-60: 60;
+--font-scale-64: 64;
+--font-scale-68: 68;
+--font-scale-72: 72;
+--font-scale-76: 76;
+--font-scale-80: 80;
+--font-scale-84: 84;
+--font-scale-88: 88;
+--font-scale-92: 92;
+
+/* font-weight */
+--font-weight-display-light: 155;
+--font-weight-display-book: 228;
+--font-weight-display-regular: 414;
+--font-weight-display-medium: 469;
+--font-weight-display-semibold: 617;
+--font-weight-sans-light: 300;
+--font-weight-sans-regular: 400;
+--font-weight-sans-medium: 500;
+--font-weight-sans-bold: 700;
+--font-weight-sans-black: 900;
+
+/* line-height*/
+--font-line-height-none: 0;
+--font-line-height-close: 1.125;
+--font-line-height-tight: 1.25;
+--font-line-height-snug: 1.375;
+--font-line-height-normal: 1.5;
+--font-line-height-relaxed: 1.625;
+
+
+/* line-height body*/
+--font-line-height-body-500: 28;
+--font-line-height-body-400: 24;
+--font-line-height-body-300: 22;
+--font-line-height-body-200: 20;
+--font-line-height-body-100: 16;
+
+/* letter-spacing (tracking) */
+--tracking-tighter: -0.025em;
+--tracking-tight: -0.015em;
+--tracking-normal: 0;
+--tracking-wide: 0.015em;
+--tracking-wider: 0.025em;
+
+/* style variables */
+/* variables below are an effort to mimic the typography system in Figma, which wraps up all vales in one style. We can get close but the latter-sapcing can't be capture in the values shorthand sadly : ( */
+
+/* fixed size text styles */
+--text--sans--body-xl: 400 1.25rem/1.75rem "Satoshi-Variable";
+--text--sans--body-xl-tracking: var(--tracking-wide);
+--text--sans--body-lg: 400 1.125rem/1.5rem "Satoshi-Variable";
+--text--sans--body-lg-tracking: var(--tracking-wide);
+--text--sans--body-md: 400 1rem/1.375rem "Satoshi-Variable";
+--text--sans--body-md-tracking: var(--tracking-wider);
+--text--sans--body-sm: 400 0.875rem/1.25rem "Satoshi-Variable";
+--text--sans--body-sm-tracking: var(--tracking-wider);
+--text--sans--body-xs: 400 0.75rem/1rem "Satoshi-Variable";
+--text--sans--body-xs-tracking: var(--tracking-wider);
+--text--sans--prose-xl: 400 1.25rem/1.625 "Satoshi-Variable";
+--text--sans--prose-xl-tracking: var(--tracking-wide);
+--text--sans--prose-lg: 400 1.125rem/1.625 "Satoshi-Variable";
+--text--sans--prose-lg-tracking: var(--tracking-wide);
+--text--sans--prose-md: 400 1rem/1.625 "Satoshi-Variable";
+--text--sans--prose-md-tracking: var(--tracking-wider);
+--text--sans--prose-sm: 400 0.875rem/1.625 "Satoshi-Variable";
+--text--sans--prose-sm-tracking: var(--tracking-wider);
+--text--sans--prose-xs: 400 0.75rem/1.625 "Satoshi-Variable";
+--text--sans--prose-xs-tracking: var(--tracking-wider);
+--text--sans--eyebrow-lg: 400 1.125rem/1.5rem "Satoshi-Variable";
+--text--sans--eyebrow-lg-tracking: var(--tracking-wide);
+--text--sans--eyebrow-lg-transform: uppercase;
+--text--sans--eyebrow-md: 400 1rem/1.375rem "Satoshi-Variable";
+--text--sans--eyebrow-md-tracking: var(--tracking-wider);
+--text--sans--eyebrow-md-transform: uppercase;
+--text--sans--eyebrow-sm: 400 0.875rem/1.25rem "Satoshi-Variable";
+--text--sans--eyebrow-sm-tracking: var(--tracking-wider);
+--text--sans--eyebrow-sm-transform: uppercase;
+--text--sans--eyebrow-xs: 400 0.75rem/1rem "Satoshi-Variable";
+--text--sans--eyebrow-xs-tracking: var(--tracking-wider);
+--text--sans--eyebrow-xs-transform: uppercase;
+
+/* responsive text styles */
+--text--sans--display-lg: 900 clamp(2.5rem, 6vw + 1rem, 3.5rem)/1.125 "Satoshi-Variable";
+--text--sans--display-lg-tracking: var(--tracking-tight);
+--text--sans--heading-2xl: 500 2.25rem/1.25 "Satoshi-Variable";
+--text--sans--heading-2xl-tracking: var(--tracking-tight);
+--text--sans--heading-xl: 500 2rem/1.25 "Satoshi-Variable";
+--text--sans--heading-xl-tracking: var(--tracking-tight);
+--text--sans--heading-lg: 500 1.75rem/1.25 "Satoshi-Variable";
+--text--sans--heading-lg-tracking: var(--tracking-tight);
+--text--sans--heading-md: 500 1.5rem/1.25 "Satoshi-Variable";
+--text--sans--heading-md-tracking: var(--tracking-normal);
+--text--sans--heading-sm: 500 1.375rem/1.25 "Satoshi-Variable";
+--text--sans--heading-sm-tracking: var(--tracking-normal);
+--text--sans--heading-xs: 500 1.125rem/1.25 "Satoshi-Variable";
+--text--sans--heading-xs-tracking: var(--tracking-normal);
+
+}
+
+@media (width >= 768px) {
+:root {
+--text--sans--heading-2xl: 500 2.5rem/1.25 var(--font-family-sans);
+--text--sans--heading-xl: 500 2.25rem/1.25 var(--font-family-sans);
+--text--sans--heading-lg: 500 2rem/1.25 var(--font-family-sans);
+--text--sans--heading-md: 500 1.75rem/1.25 var(--font-family-sans);
+--text--sans--heading-md-tracking: var(--tracking-tight);
+--text--sans--heading-sm: 500 1.5rem/1.25 var(--font-family-sans);
+--text--sans--heading-xs: 500 1.25rem/1.25 var(--font-family-sans);
+}
+}
+
+@media (width >= 1280px) {
+:root {
+--text--sans--heading-2xl: 500 3rem/1.125 var(--font-family-sans);
+--text--sans--heading-xl: 500 2.5rem/1.25 var(--font-family-sans);
+--text--sans--heading-lg: 500 2.25rem/1.25 var(--font-family-sans);
+}
+}
+
+/* COMPONENT VARIABLES */
+
+:root {
+
+/* Button */
+--button--border-radius: var(--border-radius-round);
+
+
+
+}

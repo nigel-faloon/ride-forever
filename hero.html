@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero</title>
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+    />
+    <link rel="stylesheet" href="src/assets/fonts.css">
+    <link rel="stylesheet" href="src/assets/css/styles/1-global-color.css">
+    <link rel="stylesheet" href="src/assets/css/styles/color-light.css">
+    <link rel="stylesheet" href="src/assets/css/styles/utilities.css">
+    <link rel="stylesheet" href="src/assets/css/styles/variables.css">
+    <link rel="stylesheet" href="src/assets/css/components/hero.css">
+    <link rel="stylesheet" href="src/assets/css/components/button.css">
+    <!-- <link rel="stylesheet" href="src/assets/page-menu.css"> -->
+  </head>
+  <body>
+     <section class="hero" aria-label="Page hero">
+      <div class="hero__wrapper">
+        <div class="hero__content">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Menu</a>
+              </li>
+              <li class="breadcrumbs__sep" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 3.125L7.5 16.875" stroke="rgba(255,255,255,0.64)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Menu</a>
+              </li>
+              <li class="breadcrumbs__sep" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 3.125L7.5 16.875" stroke="rgba(255,255,255,0.64)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__current" aria-current="page">Menu</span>
+              </li>
+            </ol>
+          </nav>
+
+          <h1 class="hero__heading">On-road coaching</h1>
+          <p class="hero__subtitle">Build real-world riding skills, confidence, and control with expert coaching available across <span class="no-wrap">New Zealand</span> - from just $20</p>
+          <button class="button brand-solid">Find a course</button>
+        </div>
+
+        <div class="hero__image-container">
+          <div class="hero__image" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-menu">
+      <div class="page-menu__hero-border-bottom"></div>
+      <div class="page-menu__wrapper">
+        <div class="page-menu__card">
+          <svg
+            class="page-menu__corner"
+            aria-hidden="true"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.00585938 9.91821e-05L40.001 9.91821e-05L40.001 40.0027C40.001 35.3978 38.2442 30.7929 34.7308 27.2795L12.729 5.27023C9.21564 1.75683 4.61076 9.91821e-05 0.00585938 9.91821e-05Z" fill="black"/>
+          </svg>
+
+          <p class="page-menu__eyebrow">On this page</p>
+
+          <ul class="page-menu__list">
+            <li>
+              <a class="page-menu__link" href="#link-1">
+                <img class="page-menu__icon" src="public/images/arrow-down-yellow.svg" alt="" aria-hidden="true" />
+                <span>About our on-road coaching courses</span>
+              </a>
+            </li>
+            <li>
+              <a class="page-menu__link" href="#link-2">
+                <img class="page-menu__icon" src="public/images/arrow-down-yellow.svg" alt="" aria-hidden="true" />
+                <span>Which course is best for you?</span>
+              </a>
+            </li>
+            <li>
+              <a class="page-menu__link" href="#link-3">
+                <img class="page-menu__icon" src="public/images/arrow-down-yellow.svg" alt="" aria-hidden="true" />
+                <span>Find a course near you</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+
+    <main class="page-body">
+      <section id="link-1" class="page-body__section">
+        <h2>Link 1</h2>
+        <p>Page content goes here.</p>
+      </section>
+      <section id="link-2" class="page-body__section">
+        <h2>Link 2</h2>
+        <p>Page content goes here.</p>
+      </section>
+      <section id="link-3" class="page-body__section">
+        <h2>Link 3</h2>
+        <p>Page content goes here.</p>
+      </section>
+    </main>
+
+    <script src="/main.js"></script>
+
+  </body>
+</html>
