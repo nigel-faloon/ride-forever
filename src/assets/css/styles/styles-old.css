@@ -1,17 +1,19 @@
-@font-face {
-    font-family: "Satoshi-Variable";
-    src: url("/_resources/app/webfonts/KlavikaWebBasic/KlavikaWebBasicRegular/KlavikaWebBasicRegular.woff") format("woff"),url("/_resources/app/webfonts/KlavikaWebBasic/KlavikaWebBasicRegular/KlavikaWebBasicRegular.woff2") format("woff2"),url("/_resources/app/webfonts/KlavikaWebBasic/KlavikaWebBasicRegular/KlavikaWebBasicRegular.eot") format("opentype")
-}
-
-@font-face {
-    font-family: "Satoshi-Variable";
-    src: url("/_resources/app/webfonts/KlavikaWebBasic/KlavikaWebBasicBold/KlavikaWebBasicBold.woff") format("woff"),url("/_resources/app/webfonts/KlavikaWebBasic/KlavikaWebBasicBold/KlavikaWebBasicBold.woff2") format("woff2"),url("/_resources/app/webfonts/KlavikaWebBasic/KlavikaWebBasicBold/KlavikaWebBasicBold.eot") format("opentype")
-}
 
 @font-face {
     font-family: "sourceSerifPro-regular";
     src: url("/_resources/app/webfonts/SourceSerifPro/SourceSerifPro-Regular.ttf") format("truetype")
 }
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
 
 @font-face {
   font-family: "Satoshi-Variable";
@@ -29,7 +31,7 @@
 }
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
-    font-family: "Satoshi-Variable",Arial,Helvetica,sans-serif;
+    font-family: "Satoshi-Variable", Arial, Helvetica, sans-serif;
     min-width: 250px
 }
 

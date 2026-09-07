@@ -1,0 +1,245 @@
+:root {
+
+/* brand colours - we use in place of the most frequently used primitive colours, to facilitate consistent theming */
+--colour--brand--ride-forever-black: var(--colour--neutral-950);
+--colour--brand--ride-forever-yellow: var(--colour--yellow-300);
+--colour--brand--ride-forever-white: var(--colour--white);
+
+
+/* Foreground colours */
+--colour--foreground-placeholder-update: var(--colour--pink-400);
+--colour--foreground-primary: var(--colour--white);
+--colour--foreground-primary_hover: var(--colour-alpha--white-80);
+--colour--foreground-primary_active: var(--colour--white);
+--colour--foreground-oncontrast-primary: var(--colour--brand--ride-forever-black);
+--colour--foreground-oncontrast-primary_hover: var(--colour-alpha--black-80);
+--colour--foreground-oncontrast-primary_active: var(--colour--brand--ride-forever-black);
+--colour--foreground-secondary: var(--colour--neutral-300);
+--colour--foreground-secondary_hover: var(--colour--neutral-100);
+--colour--foreground-oncontrast-secondary: var(--colour-alpha--black-88);
+--colour--foreground-oncontrast-tertiary: var(--colour-alpha--black-72);
+--colour--foreground-tertiary: var(--colour--neutral-400);
+--colour--foreground-tertiary_hover: var(--colour--neutral-300);
+--colour--foreground-quaternary: var(--colour--neutral-400);
+--colour--foreground-quaternary_hover: var(--colour--neutral-300);
+--colour--foreground-white: var(--colour--white);
+--colour--foreground-white_hover: var(--colour-alpha--white-72);
+--colour--foreground-white_active: var(--colour-alpha--white-64);
+--colour--foreground-brand-primary: var(--colour--brand--ride-forever-yellow);
+--colour--foreground-brand-primary_hover: var(--colour--yellow-400);
+--colour--foreground-brand-primary_active: var(--colour--yellow-200);
+--colour--foreground-brand-secondary: var(--colour--yellow-400);
+--colour--foreground-brand-secondary_hover: var(--colour--yellow-500);
+--colour--foreground-brand-secondary_active: var(--colour--yellow-300);
+--colour--foreground-disabled: var(--colour--neutral-600);
+--colour--foreground-disabled-white: var(--colour-alpha--white-80);
+--colour--foreground-skeleton: var(--colour--neutral-800);
+--colour--foreground-oncontrast-disabled: var(--colour--neutral-400);
+--colour--foreground-field_default: var(--colour--neutral-100);
+--colour--foreground-field_placeholder: var(--colour-alpha--white-64);
+--colour--foreground-field_disabled: var(--colour-alpha--white-48);
+--colour--foreground-error: var(--colour--red-500);
+--colour--foreground-error-hover: var(--colour--red-400);
+--colour--foreground-error-active: var(--colour--red-300);
+--colour--foreground-warning: var(--colour-functional--yellow-400);
+--colour--foreground-warning-hover: var(--colour-functional--yellow-300);
+--colour--foreground-warning-active: var(--colour-functional--yellow-200);
+--colour--foreground-success: var(--colour--green-500);
+--colour--foreground-success-hover: var(--colour--green-400);
+--colour--foreground-success-active: var(--colour--green-300);
+--colour--foreground-info: var(--colour-functional--blue-500);
+--colour--foreground-info-hover: var(--colour-functional--blue-400);
+--colour--foreground-info-active: var(--colour-functional--blue-300);
+--colour--foreground-rating: var(--colour-functional--blue-500);
+--colour--foreground-rating-hover: var(--colour-functional--blue-400);
+--colour--foreground-rating-active: var(--colour-functional--blue-300);
+--colour--foreground-loading: var(--colour-functional--blue-500);
+
+/* Link colours */
+/* '--colour--link' is used to colour text links and the underline decoration*/
+--colour--link: var(--colour--yellow-300);
+--colour--link_hover: var(--colour--yellow-500);
+--colour--link_active: var(--colour--yellow-500);
+--colour--link_visited: var(--colour--purple-400);
+/* '--colour--link-underline' is used to target the text-decoration of underlined links */
+--colour--link-underline: var(--colour--alpha-black-72);
+--colour--link-underline_hover: var(--colour--black);
+--colour--link-underline_active: var(--colour--alpha-black-88);
+--colour--link-underline_visted: var(--colour--purple-600);
+--colour--link-underline-onContrast: var(--colour--alpha-white-88);
+--colour--link-underline-onContrast_hover: var(--colour--white);
+--colour--link-underline-onContrast_active: var(--colour--alpha-white-88);
+--colour--link-underline-onContrast_visted: var(--colour--purple-400);
+--colour--link-underline-brand: var(--colour--yellow-400);
+--colour--link-underline-brand_hover: var(--colour--yellow-500);
+--colour--link-underline-brand_active: var(--colour--yellow-600);
+--colour--link-underline-brand_visted: var(--colour--purple-600);
+
+
+--colour--link-underline: var(--colour--yellow-300);
+--colour--link-underline_hover: var(--colour--yellow-400);
+--colour--link-underline_active: var(--colour--yellow-500);
+--colour--link-underline_visted: var(--colour--purple-400);
+--colour--link-oncontrast: var(--colour--yellow-600);
+--colour--link-oncontrast_hover: var(--colour--yellow-700);
+--colour--link-oncontrast_active: var(--colour--yellow-700);
+--colour--link-oncontrast_visited: var(--colour--purple-600);
+
+/* Background colours */
+--colour--background-primary: var(--colour--brand--ride-forever-black);
+--colour--background-primary_hover: var(--colour--neutral-800);
+--colour--background-primary_active: var(--colour--neutral-800);
+--colour--background-secondary: var(--colour--neutral-900);
+--colour--background-secondary_hover: var(--colour--neutral-800);
+--colour--background-secondary_active: var(--colour--neutral-800);
+--colour--background-tertiary: var(--colour--neutral-800);
+--colour--background-bold: var(--colour--neutral-400);
+--colour--background-contrast: var(--colour--white);
+--colour--background-contrast_hover: var(--colour-alpha--white-80);
+--colour--background-contrast_active: var(--colour--white);
+--colour--background-transparent_hover: var(--colour-alpha--white-8);
+--colour--background-transparent_active: var(--colour-alpha--white-8);
+--colour--background-transparent-brand_hover: var(--colour-alpha--yellow-800-56);
+--colour--background-transparent-brand_active: var(--colour-alpha--yellow-800-32);
+--colour--background-oncontrast: var(--colour--brand--ride-forever-black);
+--colour--background-oncontrast_hover: var(--colour-alpha--black-72);
+--colour--background-oncontrast_active: var(--colour-alpha--black-48);
+--colour--background-oncontrast-subtle: var(--colour-alpha--black-8);
+--colour--background-oncontrast-subtle_hover: var(--colour-alpha--black-16);
+--colour--background-oncontrast-subtle_active: var(--colour-alpha--black-24);
+--colour--background-solid-disabled: var(--colour--neutral-600);
+--colour--background-tinted-disabled: var(--colour--neutral-700);
+--colour--background-oncontrast-disabled: var(--colour-alpha--black-32);
+--colour--background-control-disabled: var(--colour--neutral-700);
+--colour--background-brand-primary: var(--colour--yellow-300);
+--colour--background-brand-primary_hover: var(--colour--yellow-400);
+--colour--background-brand-primary_active: var(--colour--yellow-400);
+--colour--background-brand-strong: var(--colour--yellow-700);
+--colour--background-brand-strong_hover: var(--colour--yellow-700);
+--colour--background-brand-strong_active: var(--colour--yellow-900);
+--colour--background-brand-bold: var(--colour--yellow-600);
+--colour--background-brand-bold_hover: var(--colour--yellow-700);
+--colour--background-brand-muted: var(--colour--yellow-200);
+--colour--background-brand-subtle: var(--colour--yellow-100);
+--colour--background-brand-subtle_hover: var(--colour--yellow-200);
+--colour--background-brand-subtle_active: var(--colour--yellow-300);
+--colour--background-brand-minimal: var(--colour--yellow-050);
+--colour--background-brand-minimal_hover: var(--colour--yellow-100);
+--colour--background-brand-minimal_active: var(--colour--yellow-200);
+--colour--background-oncontrast-brand-minimal: var(--colour--yellow-800);
+--colour--background-oncontrast-brand-subtle_hover: var(--colour-alpha--yellow-800-72);
+--colour--background-oncontrast-brand-subtle_active: var(--colour-functional--yellow-700);
+--colour--background-success-bold: var(--colour--green-600);
+--colour--background-success-bold_hover: var(--colour--green-700);
+--colour--background-success-bold_active: var(--colour--green-800);
+--colour--background-success-subtle: var(--colour--green-100);
+--colour--background-success-minimal: var(--colour--green-050);
+--colour--background-error-bold: var(--colour--red-600);
+--colour--background-error-bold_hover: var(--colour--red-700);
+--colour--background-error-bold_active: var(--colour--red-800);
+--colour--background-error-subtle: var(--colour--red-100);
+--colour--background-error-minimal: var(--colour--red-050);
+--colour--background-warning-bold: var(--colour-functional--yellow-500);
+--colour--background-warning-bold_hover: var(--colour-functional--yellow-600);
+--colour--background-warning-bold_active: var(--colour-functional--yellow-700);
+--colour--background-warning-subtle: var(--colour-functional--yellow-100);
+--colour--background-warning-minimal: var(--colour-functional--yellow-050);
+--colour--background-info-bold: var(--colour-functional--blue-500);
+--colour--background-info-bold_hover: var(--colour-functional--blue-600);
+--colour--background-info-bold_active: var(--colour-functional--blue-700);
+--colour--background-info-subtle: var(--colour-functional--blue-100);
+--colour--background-info-minimal: var(--colour-functional--blue-050);
+--colour--background-form-container: var(--colour--neutral-900);
+--colour--background-notification: var(--colour--red-600);
+--colour--background-data-table-row-hover: var(--colour-alpha--white-8);
+--colour--background-data-table-row-striped: var(--colour-alpha--white-4);
+--colour--background-data-table-row-header: var(--colour-alpha--white-8);
+--colour--background-data-table-row-header-hover: var(--colour-alpha--white-16);
+
+
+/* Border colours */
+
+--colour--border-placeholder-update: var(--colour--pink-400);
+--colour--border-subtle: var(--colour--neutral-800);
+--colour--border-subtle_hover: var(--colour--neutral-600);
+--colour--border-muted: var(--colour--neutral-700);
+--colour--border-muted_hover: var(--colour--neutral-500);
+--colour--border-contrast: var(--colour--white);
+--colour--border-strong: var(--colour-alpha--white-72);
+--colour--border-disabled: var(--colour--neutral-600);
+--colour--border-disabled-subtle: var(--colour--neutral-700);
+--colour--border-oncontrast-disabled: var(--colour--neutral-300);
+--colour--border-brand-primary: var(--colour--yellow-300);
+--colour--border-brand-primary_hover: var(--colour--yellow-400);
+--colour--border-brand-primary_active: var(--colour--yellow-400);
+--colour--border-brand-strong: var(--colour--yellow-600);
+--colour--border-brand-bold: var(--colour--yellow-500);
+--colour--border-brand-muted: var(--colour-alpha--yellow-300-16);
+--colour--border-brand-subtle: var(--colour-alpha--yellow-300-8);
+--colour--border-brand-minimal: var(--colour-alpha--yellow-300-8);
+--colour--border-oncontrast-brand: var(--colour--yellow-300);
+--colour--border-oncontrast-brand_hover: var(--colour-alpha--yellow-300-72);
+--colour--border-oncontrast-brand_active: var(--colour--yellow-300);
+--colour--border-success-bold: var(--colour--green-600);
+--colour--border-success-bold-hover: var(--colour--green-700);
+--colour--border-success-bold-active: var(--colour--green-800);
+--colour--border-success-muted: var(--colour--green-300);
+--colour--border-error-bold: var(--colour--red-600);
+--colour--border-error-bold-hover: var(--colour--red-700);
+--colour--border-error-bold-active: var(--colour--red-800);
+--colour--border-error-subtle: var(--colour--red-300);
+--colour--border-warning-subtle: var(--colour-functional--yellow-300);
+--colour--border-info-muted: var(--colour-functional--blue-300);
+--colour--border-oncontrast-contrast: var(--colour--brand--ride-forever-black);
+--colour--border-oncontrast-contrast_hover: var(--colour-alpha--black-80);
+--colour--border-oncontrast-contrast_active: var(--colour-alpha--black-72);
+--colour--border-oncontrast-strong: var(--colour-alpha--black-72);
+--colour--border-oncontrast-bold: var(--colour-alpha--black-64);
+--colour--border-oncontrast-muted: var(--colour-alpha--black-40);
+--colour--border-oncontrast-subtle: var(--colour-alpha--black-24);
+--colour--border-field-rest: var(--colour--neutral-600);
+--colour--border-field-hover: var(--colour--neutral-500);
+--colour--border-field-selected: var(--colour--white);
+--colour--border-field-disabled: var(--colour--neutral-700);
+--colour--border-data-table: var(--colour--border-muted);
+--colour--border-focus-default: var(--colour--purple-400);
+--colour--border-focus-select: var(--colour--white);
+
+
+/* Fixed semantic colours  - these are used for elements that need to maintain a consistent colour across different themes*/
+
+--colour-fixed--foreground-onlight: var(--colour--brand--ride-forever-black);
+--colour-fixed--foreground-ondark: var(--colour--white);
+--colour-fixed--foreground-ondark-secondary: var(--colour-alpha--white-88);
+--colour-fixed--foreground-ondark-tertiary: var(--colour-alpha--white-72);
+--colour-fixed--background-dark: var(--colour--brand--ride-forever-black);
+--colour-fixed--border-white-strong: var(--colour-alpha--white-72);
+--colour-fixed--link-ondark: var(--colour--white);
+--colour-fixed--link-ondark_hover: var(--colour-alpha--white-72);
+--colour-fixed--link-ondark_active: var(--colour--white);
+--colour-fixed--link-ondark_visited: var(--colour--purple-400);
+--colour-fixed--link-white: var(--colour--white);
+--colour-fixed--link-white_hover: var(--colour-alpha--white-72);
+--colour-fixed--link-white_active: var(--colour--white);
+--colour-fixed--link-white_visted: var(--colour--purple-400);
+--colour-fixed--link-underline-ondark: var(--colour-alpha--white-72);
+--colour-fixed--link-underline-ondark_hover: var(--colour--none);
+--colour-fixed--link-underline-ondark_active: var(--colour--white);
+--colour-fixed--link-underline-ondark_visited: var(--colour--purple-400);
+--colour-fixed--link-underline-white: var(--colour-alpha--white-72);
+--colour-fixed--link-underline-white_hover: var(--colour--none);
+--colour-fixed--link-underline-white_active: var(--colour--white);
+--colour-fixed--link-underline-white_visted: var(--colour--purple-400);
+
+
+/* Component specific colours - these are used for elements that need to maintain a consistent colour across different themes NOTE: these variables come for the Ride Forever local library, not the Accent Fopundations library*/
+
+--page-menu--colour-background: var(--colour--neutral-800);
+
+}
+
+
+
+
+
+

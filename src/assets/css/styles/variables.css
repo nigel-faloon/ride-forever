@@ -23,9 +23,68 @@
 
 
 
-/* GRID */
+
 
 /* LAYOUT */
+
+/* device width */
+--device--width: 320;
+
+/* breakpoints */
+  --breakpoint--min-xxs: 320;
+  --breakpoint--min-xs: 480;
+  --breakpoint--min-sm: 768;
+  --breakpoint--min-md: 1024; 
+  --breakpoint--min-lg: 1280;
+  --breakpoint--min-xl: 1440;
+  --breakpoint--min-xxl: 1600;
+
+  --breakpoint--max-xxs: 479;
+  --breakpoint--max-xs: 767;
+  --breakpoint--max-sm: 1023;
+  --breakpoint--max-md: 1279;
+  --breakpoint--max-lg: 1439;
+  --breakpoint--max-xl: 1599;
+  --breakpoint--max-xxl: 1920;
+
+
+/* page or container width */
+--width--site-gutter: var(--space--200);
+--width--content--max: 1472px;
+
+/* section spaces */
+--section-space--standard: var(--space--600);
+--section-space--spacious: var(--space--800);
+
+}
+
+@media (width >= 480px) {
+  :root {
+  --section-space--standard: var(--space--800);
+  --section-space--spacious: var(--space--1000);   
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+  --section-space--standard: var(--space--1000);
+  --section-space--spacious: var(--space--1400); 
+  }
+}
+
+:root {
+
+/* flow spaces */
+--flow-space--lg: var(--space--400);
+
+/* grid spaces */
+--grid-space--gutter: var(--space--200);
+
+/* card spaces */
+--card--padding: var(--space--300);
+--card--padding-spacious: var(--space--400);
+--card--grid-gap: var(--space--300);
+
 
 /* BORDER */
 

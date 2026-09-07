@@ -1,35 +1,215 @@
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 20px 24px;
-  border: none;
-  border-radius: var(--button--border-radius);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Button component default values */
+:root {
+  --button--border-radius: var(--border-radius--round);
+  --button-font: var(--text--sans--body-md);
+  --button-line-height: var(--text--sans--body-md-line-height);
+  --button-font-weight: var(--font-weight--sans-bold);
+  --button-padding-x: var(--space--250);
+  --button-gap: var(--space--100);
+  --button-height: 40px;
 }
 
-.button .brand-solid {
-    background-color: var(--color--background-brand-primary);
-}
-
-.button .neutral-solid {
-    background-color: var(--color--background-primary);
-}
-
-/* Base button */
+/* Button base */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space--100);
+  gap: var(--button-gap);
 
-  min-height: 2.75rem;
-  padding: 0 var(--space--4);
+  min-height: var(--button-height);
+  padding-inline: var(--button-padding-x);
 
   border: 1px solid transparent;
-  border-radius: var(--radius-md);
+  border-radius: var(--button--border-radius);
 
-  font: var(--text-label-md);
+  font-family: inherit;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+  text-decoration: none;
+  white-space: nowrap;
+
   cursor: pointer;
+
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+/* button sizes */
+
+.button--sm {
+  --button-height: 32px;
+  --button-padding-x: var(--space--150);
+  --button-gap: var(--space--075);
+  --button-font: var(--text--sans--body-sm);
+  --button-line-height: var(--text--sans--body-sm-line-height);
+}
+
+.button--md {
+  --button-height: 40px;
+  --button-padding-x: var(--space--250);
+  --button-gap: var(--space--100);
+  --button-font: var(--text--sans--body-md);
+  --button-line-height: var(--text--sans--body-md-line-height);
+}
+
+.button--lg {
+  --button-height: 56px;
+  --button-padding-x: var(--space--250);
+  --button-gap: var(--space--125);
+  --button-font: var(--text--sans--body-lg);
+  --button-line-height: var(--text--sans--body-lg-line-height);
+  --button-font-weight: var(--font-weight--sans-bold);
+}
+
+/* button styles (colour family) */
+
+.button--neutral {
+  --button-color: var(--color-text-primary);
+  --button-color-hover: var(--color-text-primary);
+  --button-color-active: var(--color-text-primary);
+
+  --button-background: var(--color-background-primary);
+  --button-background-hover: var(--color-background-secondary);
+  --button-background-active: var(--color-background-tertiary);
+
+  --button-border: var(--color-border-primary);
+  --button-border-hover: var(--color-border-primary);
+}
+
+.button--brand {
+  --button-color: var(--colour-fixed--foreground-onlight);
+  --button-color-hover: var(--colour-fixed--foreground-onlight);
+  --button-color-active: var(--colour-fixed--foreground-onlight);
+
+  --button-background: var(--colour--background-brand-primary);
+  --button-background-hover: var(--colour--background-brand-primary_hover);
+  --button-background-active: var(--colour--background-brand-primary_active);
+
+  --button-border: var(--colour--border-brand-primary);
+  --button-border-hover: var(--colour--border-brand-primary_hover);
+  --button-border-active: var(--colour--border-brand-primary_active);
+}
+
+.button--success {
+  --button-color: var(--color-text-success-primary);
+  --button-color-hover: var(--color-text-success-primary);
+  --button-color-active: var(--color-text-success-primary);
+
+  --button-background: var(--color-background-success-primary);
+  --button-background-hover: var(--color-background-success-hover);
+  --button-background-active: var(--color-background-success-active);
+
+  --button-border: var(--color-border-success-primary);
+  --button-border-hover: var(--color-border-success-hover);
+}
+
+.button--error {
+  --button-color: var(--color-text-error-primary);
+  --button-color-hover: var(--color-text-error-primary);
+  --button-color-active: var(--color-text-error-primary);
+
+  --button-background: var(--color-background-error-primary);
+  --button-background-hover: var(--color-background-error-hover);
+  --button-background-active: var(--color-background-error-active);
+
+  --button-border: var(--color-border-error-primary);
+  --button-border-hover: var(--color-border-error-hover);
+}
+
+/* button emphasis (visual hierarchy layer, where 'solid' = highest emphasis, down to 'text' which is the lowest emphasis button) */
+
+.button--solid {
+  background: var(--button-background);
+  color: var(--button-color);
+  border-color: transparent;
+}
+
+.button--solid:hover {
+  background: var(--button-background-hover);
+}
+
+.button--solid:active {
+  background: var(--button-background-active);
+}
+
+.button--tinted {
+  background: var(--button-background-tinted);
+  color: var(--button-color);
+  border-color: transparent;
+}
+
+.button--tinted:hover {
+  background: var(--button-background-tinted-hover);
+}
+
+.button--tinted:active {
+  background: var(--button-background-tinted-active);
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--button-color);
+  border-color: var(--button-border);
+}
+
+.button--outline:hover {
+  background: var(--button-background-tinted);
+  border-color: var(--button-border-hover);
+}
+
+.button--outline:active {
+  background: var(--button-background-tinted-active);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--button-color);
+  border-color: transparent;
+}
+
+.button--ghost:hover {
+  background: var(--button-background-tinted);
+}
+
+.button--ghost:active {
+  background: var(--button-background-tinted-active);
+}
+
+.button--text {
+  background: transparent;
+  color: var(--button-color);
+  border-color: transparent;
+
+  padding-inline: 0;
+}
+
+.button--text:hover {
+  color: var(--button-color-hover);
+}
+
+.button--text:active {
+  color: var(--button-color-active);
+}
+
+/* button states (hover, disabled etc) */
+
+.button:hover {
+  /* state behaviour */
+}
+
+.button:active {
+  /* state behaviour */
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
