@@ -1,16 +1,3 @@
-:root {
-
-  --border-radius-image: 10px;
-  --border-radius-card: 12px;
-
-  --page-margin: 16px;
-  --grid-gutter: 16px;
-
-  --hero-subtitle-size: 18px;
-  --hero-subtitle-line: 1.35;
-  --hero-content-gap: 24px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -47,15 +34,15 @@ ol {
   max-width: var(--width--content--max);
   display: flex;
   flex-direction: column;
-  padding: 0 var(--page-margin) var(--space--600);
-  gap: var(--space--400);
+  padding: 0 var(--width--site-gutter) var(--space--600);
+  gap: var(--flow-space--lg);
 }
 
 .hero__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--hero-content-gap);
+  gap: var(--space--300);
   padding-top: var(--space--400);
 }
 
@@ -64,7 +51,7 @@ ol {
 .breadcrumbs__list {
   display: flex;
   align-items: center;
-  gap: var(--space--100);
+  gap: var(--space--025);
   flex-wrap: wrap;
 }
 
@@ -129,8 +116,8 @@ ol {
 }
 
 .hero__image {
-    aspect-ratio: 1.785;
-    width: 100%;
+   width: 100%;
+   aspect-ratio: 1.785;
     
     border: 0;
 
@@ -217,11 +204,6 @@ ol {
 
 /* >= 480px (XS) */
 @media (min-width: 480px) {
-  :root {
-    --page-margin: 24px;
-    --grid-gutter: 16px;
-    --hero-heading-size: 40px;
-  }
   
   .hero__wrapper {
     gap: var(--space--600);
@@ -231,31 +213,27 @@ ol {
 
 /* >= 768px (SM) - image moves below content on a 12-col grid, links use larger type */
 @media (min-width: 768px) {
-  :root {
-    --grid-gutter: 24px;
-    --hero-heading-size: 48px;
+
+  .breadcrumbs__list {
+  gap: var(--space--100);
   }
-
-
+  
   .hero__content,
   .hero__image-container {
-    padding-left: calc((100% + var(--grid-gutter)) / 12);
-    padding-right: calc((100% + var(--grid-gutter)) / 12);
+    padding-left: calc((100% + var(--grid-space--gutter)) / 12);
+    padding-right: calc((100% + var(--grid-space--gutter)) / 12);
   }
 
 }
 
 /* >= 1024px (MD) - content and image side by side */
 @media (min-width: 1024px) {
-  :root {
-    --hero-content-gap: 40px;
-  }
 
   .hero__wrapper {
     flex-direction: row;
     align-items: flex-start;
     padding: 0 40px 16px;
-    gap: var(--grid-gutter);
+    gap: var(--grid-space--gutter);
   }
 
   .hero__content {
@@ -265,15 +243,17 @@ ol {
 
   .hero__image-container {
     flex: 5 1 0;
-    padding-top: 64px;
+    padding-top: var(--space--800);
     padding-left: 0;
     padding-right: 0;
   }
 
   .hero__image {
+    flex: 0 0 calc(100% + 5vw);
+    width: calc(100% + 5vw);
+    margin-right: -5vw;
     aspect-ratio: 135 / 76;
   }
-
 
 }
 
