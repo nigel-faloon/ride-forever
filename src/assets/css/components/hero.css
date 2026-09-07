@@ -222,7 +222,7 @@ ol {
   .hero__image-container {
     padding-left: calc((100% + var(--grid-space--gutter)) / 12);
     padding-right: calc((100% + var(--grid-space--gutter)) / 12);
-    gap: var(--space--300);
+    gap: var(--space--500);
   }
 
 }
