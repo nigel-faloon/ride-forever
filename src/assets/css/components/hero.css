@@ -34,8 +34,7 @@ ol {
   max-width: var(--width--content--max);
   display: flex;
   flex-direction: column;
-  padding: 0 var(--width--site-gutter) var(--space--600);
-  gap: var(--flow-space--lg);
+  padding: 0 var(--width--site-gutter) var(--flow-space--lg);
 }
 
 .hero__content {
@@ -43,7 +42,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space--300);
-  padding-top: var(--space--400);
+  padding: var(--flow-space--md) 0 var(--flow-space--lg);
 }
 
 /* Breadcrumbs */
@@ -66,6 +65,7 @@ ol {
 }
 
 .breadcrumbs__link:hover {
+  color: var(--colour-fixed--link-white_hover);
   text-decoration-color: transparent;
 }
 
@@ -202,16 +202,9 @@ ol {
   color: var(--colour--foreground-secondary);
 }
 
-/* >= 480px (XS) */
-@media (min-width: 480px) {
-  
-  .hero__wrapper {
-    gap: var(--space--600);
-}
 
-}
 
-/* >= 768px (SM) - image moves below content on a 12-col grid, links use larger type */
+/* >= 768px (SM) - image moves below content on a 12-col grid */
 @media (min-width: 768px) {
 
   .breadcrumbs__list {
@@ -233,18 +226,18 @@ ol {
   .hero__wrapper {
     flex-direction: row;
     align-items: flex-start;
-    padding: 0 40px 16px;
+    padding-bottom: var(--space--0);
     gap: var(--grid-space--gutter);
   }
 
   .hero__content {
     flex: 7 1 0;
-    padding: 48px 0 32px;
+    padding: var(--flow-space--md) var(--space--200) var(--flow-space--lg) 0;
   }
 
   .hero__image-container {
     flex: 5 1 0;
-    padding-top: var(--space--800);
+    padding-top: var(--flow-space--lg);
     padding-left: 0;
     padding-right: 0;
   }
@@ -259,13 +252,4 @@ ol {
 }
 
 /* >= 1280px (LG+) */
-@media (min-width: 1280px) {
-  :root {
-    --page-margin: 40px;
-    --grid-gutter: 32px;
-  }
 
-  .hero__wrapper {
-    padding-bottom: 24px;
-  }
-}

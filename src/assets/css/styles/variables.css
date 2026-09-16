@@ -56,6 +56,7 @@
 --grid-space--gutter: var(--space--200);
 
 /* flow spaces */
+--flow-space--md: var(--space--300);
 --flow-space--lg: var(--space--400);
 
 /* card spaces */
@@ -70,7 +71,8 @@
   --width--site-gutter: var(--space--300);
   --section-space--standard: var(--space--800);
   --section-space--spacious: var(--space--1000);
-  --flow-space--lg: var(--space--600);   
+  --flow-space--md: var(--space--400);
+  --flow-space--lg: var(--space--600);  
   }
 }
 
@@ -85,6 +87,7 @@
   --width--site-gutter: var(--space--500);
   --section-space--standard: var(--space--1000);
   --section-space--spacious: var(--space--1400);
+  --flow-space--md: var(--space--600); 
   --flow-space--lg: var(--space--800);
   --card--padding-spacious: var(--space--400);
   }

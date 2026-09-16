@@ -62,13 +62,14 @@
   gap: 8px;
   font: var(--text--sans--body-md);
   letter-spacing: var(--text--sans--body-md-tracking);
-  color: var(--colour--foreground-primary);
+  color: var(--colour-fixed--link-white);
   text-decoration: underline var(--colour-fixed--link-underline-ondark);
   text-underline-offset: 4px;
   transition: text-decoration-color 200ms; /* Smooth transition for scale effect */
 }
 
 .page-menu__link:hover {
+  color: var(--colour-fixed--link-white_hover);
   text-decoration-color: transparent;
 }
 
