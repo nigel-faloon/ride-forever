@@ -182,28 +182,6 @@ ol {
 }
 
 
-/* Page body placeholder content below the hero */
-
-.page-body {
-  max-width: var(--width--content--max);
-  margin: 0 auto;
-  padding: 80px var(--width--site-gutter) 64px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--section-space--spacious);
-}
-
-.page-body__section h2 {
-  margin: 0 0 8px;
-}
-
-.page-body__section p {
-  margin: 0;
-  color: var(--colour--foreground-secondary);
-}
-
-
-
 /* >= 768px (SM) - image moves below content on a 12-col grid */
 @media (min-width: 768px) {
 

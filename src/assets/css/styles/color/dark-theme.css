@@ -234,7 +234,7 @@
 
 /* Component specific colours - these are used for elements that need to maintain a consistent colour across different themes NOTE: these variables come for the Ride Forever local library, not the Accent Fopundations library*/
 
---page-menu--colour-background: var(--colour--neutral-800);
+--in-page-navigation--colour-background: var(--colour--neutral-800);
 
 }
 

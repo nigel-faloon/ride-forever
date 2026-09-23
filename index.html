@@ -50,12 +50,12 @@
       </div>
     </section>
 
-    <div class="page-menu">
-      <div class="page-menu__hero-border-bottom"></div>
-      <div class="page-menu__wrapper">
-        <div class="page-menu__card">
+    <div class="in-page-navigation">
+      <div class="in-page-navigation__hero-border-bottom"></div>
+      <div class="in-page-navigation__wrapper">
+        <div class="in-page-navigation__card">
           <svg
-            class="page-menu__corner"
+            class="in-page-navigation__corner"
             aria-hidden="true"
             width="40"
             height="40"
@@ -66,24 +66,24 @@
             <path d="M0.00585938 9.91821e-05L40.001 9.91821e-05L40.001 40.0027C40.001 35.3978 38.2442 30.7929 34.7308 27.2795L12.729 5.27023C9.21564 1.75683 4.61076 9.91821e-05 0.00585938 9.91821e-05Z" fill="var(--colour-fixed--background-dark)"/>
           </svg>
 
-          <p class="page-menu__eyebrow">On this page</p>
+          <p class="in-page-navigation__heading">On this page</p>
 
-          <ul class="page-menu__list">
+          <ul class="in-page-navigation__list">
             <li>
-              <a class="page-menu__link" href="#link-1">
-                <img class="page-menu__icon" src="public/images/arrow-down-yellow.svg" alt="" aria-hidden="true" />
+              <a class="in-page-navigation__link" href="#link-1">
+                <img class="in-page-navigation__icon" src="public/images/icons/arrow-down-yellow.svg" alt="" aria-hidden="true" />
                 <span>About our on-road coaching courses</span>
               </a>
             </li>
             <li>
-              <a class="page-menu__link" href="#link-2">
-                <img class="page-menu__icon" src="public/images/arrow-down-yellow.svg" alt="" aria-hidden="true" />
+              <a class="in-page-navigation__link" href="#link-2">
+                <img class="in-page-navigation__icon" src="public/images/icons/arrow-down-yellow.svg" alt="" aria-hidden="true" />
                 <span>Which course is best for you?</span>
               </a>
             </li>
             <li>
-              <a class="page-menu__link" href="#link-3">
-                <img class="page-menu__icon" src="public/images/arrow-down-yellow.svg" alt="" aria-hidden="true" />
+              <a class="in-page-navigation__link" href="#link-3">
+                <img class="in-page-navigation__icon" src="public/images/icons/arrow-down-yellow.svg" alt="" aria-hidden="true" />
                 <span>Find a course near you</span>
               </a>
             </li>
@@ -97,10 +97,63 @@
         <h2>Link 1</h2>
         <p>Page content goes here.</p>
       </section>
-      <section id="link-2" class="page-body__section">
+      <!-- <section id="link-2" class="page-body__section">
         <h2>Link 2</h2>
         <p>Page content goes here.</p>
-      </section>
+      </section> -->
+      <section id="link-2" class="course-selection" aria-labelledby="course-selection-title">
+			<div class="course-selection__inner">
+				<header class="course-selection__header">
+					<h2 id="course-selection-title">Which course is best for you?</h1>
+				</header>
+				<div class="course-grid">
+					<article class="course-card">
+						<div class="course-card__badge"><img src="public/images/course-badges/scooter-skills.svg" alt="Certified Scooter Skills course badge"></div>
+						<div class="course-card__content">
+							<h3>Urban Commuter or Scooter Survival</h3>
+							<p>If you're new to riding a motorcycle or scooter, mostly ride in an urban environment, and want to boost early skills and commute safely.</p>
+						</div>
+						<footer class="course-card__footer">
+							<p class="course-card__price"><img class="course-card__price-icon" src="public/images/icons/icon-currency-circle-dollar.svg" alt="Currency circle dollar icon" aria-hidden="true"></span>4 hours for $20</p>
+							<a class="course-card__link" href="buying-a-bike.html">Learn more<span class="visually-hidden"> about Urban Commuter or Scooter Survival</span></a>
+						</footer>
+					</article>
+					<article class="course-card">
+						<div class="course-card__badge"><img src="public/images/course-badges/bronze.svg" alt="Certified Bronze course badge"></div>
+						<div class="course-card__content">
+							<h3>Bronze Course</h3>
+							<p>Ideal for riders on a Learner licence or those on a Class 6 Restricted licence riding LAMS-approved machines.</p>
+						</div>
+						<footer class="course-card__footer">
+							<p class="course-card__price"><img class="course-card__price-icon" src="public/images/icons/icon-currency-circle-dollar.svg" alt="Currency circle dollar icon" aria-hidden="true"></span>8 hours for $20</p>
+							<a class="course-card__link" href="buying-a-bike.html">Learn more<span class="visually-hidden"> about Bronze Course</span></a>
+						</footer>
+					</article>
+					<article class="course-card">
+						<div class="course-card__badge"><img src="public/images/course-badges/silver.svg" alt="Certified Silver course badge"></div>
+						<div class="course-card__content">
+							<h3>Silver Course</h3>
+							<p>Ideal for assisting riders on a Restricted licence reach their full licence or as a skills refresher for returning riders.</p>
+						</div>
+						<footer class="course-card__footer">
+							<p class="course-card__price"><img class="course-card__price-icon" src="public/images/icons/icon-currency-circle-dollar.svg" alt="Currency circle dollar icon" aria-hidden="true"></span>8 hours for $50</p>
+							<a class="course-card__link" href="buying-a-bike.html">Learn more<span class="visually-hidden"> about Silver Course</span></a>
+						</footer>
+					</article>
+					<article class="course-card">
+						<div class="course-card__badge"><img src="public/images/course-badges/gold.svg" alt="Certified Gold course badge"></div>
+						<div class="course-card__content">
+							<h3>Gold Course</h3>
+							<p>Ideal for experienced riders looking to hone specific technical aspects of riding and riding styles. Groups can determine their own course content for the day.</p>
+						</div>
+						<footer class="course-card__footer">
+							<p class="course-card__price"><img class="course-card__price-icon" src="public/images/icons/icon-currency-circle-dollar.svg" alt="Currency circle dollar icon" aria-hidden="true"></span>8 hours for $50</p>
+							<a class="course-card__link" href="buying-a-bike.html">Learn more<span class="visually-hidden"> about Gold Course</span></a>
+						</footer>
+					</article>
+				</div>
+			</div>
+		</section>
       <section id="link-3" class="page-body__section">
         <h2>Link 3</h2>
         <p>Page content goes here.</p>
