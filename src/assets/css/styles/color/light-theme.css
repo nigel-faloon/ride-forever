@@ -58,13 +58,14 @@
 --colour--foreground-rating-active: var(--colour--blue-500);
 --colour--foreground-loading: var(--colour--blue-600);
 
-/* Link colours */
+/* Foreground link colours */
 /* '--colour--link' is used to colour text links and the underline decoration*/
+/* '--colour--link-underline' is used to target the text-decoration of underlined links */
 --colour--link: var(--colour--yellow-600);
 --colour--link_hover: var(--colour--yellow-800);
 --colour--link_active: var(--colour--yellow-900);
 --colour--link_visited: var(--colour--purple-600);
-/* '--colour--link-underline' is used to target the text-decoration of underlined links */
+
 --colour--link-underline: var(--colour--alpha-black-72);
 --colour--link-underline_hover: var(--colour--black);
 --colour--link-underline_active: var(--colour--alpha-black-88);

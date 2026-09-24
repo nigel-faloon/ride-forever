@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Responsive SVG clip-path</title>
+  <title>Responsive CSS clip-path</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -21,44 +23,85 @@
       color: #222;
     }
 
+
+    /* ----------------------------------
+       Demo layout
+       ---------------------------------- */
+
     .demo {
       display: grid;
       gap: 40px;
+
       max-width: 1000px;
       margin-inline: auto;
     }
 
+
+    /* ----------------------------------
+       Clipped card
+       ---------------------------------- */
+
     .card {
+      --corner-radius: 10px;
+      --cut-size: 41.286px;
+
       padding: 32px;
 
       background: #c07d5b;
 
-      /*
-       * This references the SVG clipPath defined
-       * at the bottom of the page.
-       */
-      clip-path: url("#angled-card-clip");
+      clip-path: shape(
+
+        /* Start after top-left radius */
+        from var(--corner-radius) 0,
+
+        /* Top edge */
+        line to calc(100% - var(--cut-size)) 0,
+
+        /* Curve into diagonal */
+        curve to calc(100% - 32.818px) 3.498px
+          with calc(100% - 35.067px) 1.258px
+          / calc(100% - 38.112px) 0,
+
+        /* Diagonal edge */
+        line to calc(100% - 3.532px) 32.667px,
+
+        /* Curve into right edge */
+        curve to 100% 41.169px
+          with calc(100% - 1.271px) 34.919px
+          / 100% 37.978px,
+
+        /* Right edge */
+        line to 100% calc(100% - var(--corner-radius)),
+
+        /* Bottom-right corner */
+        curve to calc(100% - var(--corner-radius)) 100%
+          with 100% calc(100% - 4.477px)
+          / calc(100% - 4.477px) 100%,
+
+        /* Bottom edge */
+        line to var(--corner-radius) 100%,
+
+        /* Bottom-left corner */
+        curve to 0 calc(100% - var(--corner-radius))
+          with 4.477px 100%
+          / 0 calc(100% - 4.477px),
+
+        /* Left edge */
+        line to 0 var(--corner-radius),
+
+        /* Top-left corner */
+        curve to var(--corner-radius) 0
+          with 0 4.477px
+          / 4.477px 0,
+
+        close
+      );
     }
 
-    /*
-     * Different dimensions to demonstrate that
-     * the clipping geometry does not distort.
-     */
 
-    .card--original {
-      width: 497px;
-      height: 280px;
-    }
-
-    .card--wide {
-      width: 100%;
-      height: 220px;
-    }
-
-    .card--tall {
-      width: min(100%, 400px);
-      height: 420px;
-    }
+    /* ----------------------------------
+       Card content
+       ---------------------------------- */
 
     .card h2 {
       margin-block: 0 16px;
@@ -73,20 +116,29 @@
       line-height: 1.5;
     }
 
-    /*
-     * The SVG only contains the clip-path definition,
-     * so it doesn't need to be visible.
-     */
-    .clip-path-svg {
-      position: absolute;
 
-      width: 0;
-      height: 0;
+    /* ----------------------------------
+       Different sizes for testing
+       ---------------------------------- */
 
-      overflow: hidden;
+    .card--original {
+      width: min(100%, 497px);
+      min-height: 280px;
     }
+
+    .card--wide {
+      width: 100%;
+      min-height: 220px;
+    }
+
+    .card--tall {
+      width: min(100%, 400px);
+      min-height: 420px;
+    }
+
   </style>
 </head>
+
 
 <body>
 
@@ -96,8 +148,7 @@
       <h2>Original proportions</h2>
 
       <p>
-        This card is 497 × 280px, matching the dimensions
-        of the original SVG.
+        This card matches the original 497 × 280px SVG.
       </p>
     </div>
 
@@ -106,8 +157,8 @@
       <h2>Wide card</h2>
 
       <p>
-        This card is wider and shorter. The rounded corners
-        and angled corner remain the same physical size.
+        The width has increased, but the 10px corner radii
+        and 41px angled corner remain exactly the same size.
       </p>
     </div>
 
@@ -116,172 +167,12 @@
       <h2>Tall card</h2>
 
       <p>
-        This version demonstrates that the height can change
-        independently without stretching the clip-path details.
+        The card can also grow vertically without stretching
+        or distorting any of the corner geometry.
       </p>
     </div>
 
   </main>
-
-
-  <!--
-    SVG clip-path definition.
-
-    The path itself is populated by JavaScript because its
-    coordinates need to correspond to the current dimensions
-    of the element it is clipping.
-  -->
-
-  <svg
-    class="clip-path-svg"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <defs>
-      <clipPath
-        id="angled-card-clip"
-        clipPathUnits="userSpaceOnUse"
-      >
-        <path id="angled-card-path"></path>
-      </clipPath>
-    </defs>
-  </svg>
-
-
-  <script>
-    const cards = document.querySelectorAll(".card");
-
-    /*
-     * Generates the same geometry as the original SVG.
-     *
-     * w = current element width
-     * h = current element height
-     */
-    function createClipPath(w, h) {
-
-      return `
-        M 0 ${h - 10}
-
-        C 0 ${h - 4.477}
-          4.477 ${h}
-          10 ${h}
-
-        L ${w - 10} ${h}
-
-        C ${w - 4.477} ${h}
-          ${w} ${h - 4.477}
-          ${w} ${h - 10}
-
-        L ${w} 41.169
-
-        C ${w} 37.978
-          ${w - 1.271} 34.919
-          ${w - 3.532} 32.667
-
-        L ${w - 32.818} 3.498
-
-        C ${w - 35.067} 1.258
-          ${w - 38.112} 0
-          ${w - 41.286} 0
-
-        L 10 0
-
-        C 4.477 0
-          0 4.477
-          0 10
-
-        Z
-      `;
-    }
-
-
-    /*
-     * Each card requires its own clipping path because cards
-     * can have different dimensions at the same time.
-     *
-     * Therefore we create an individual <clipPath> for each
-     * component instance.
-     */
-
-    const defs = document.querySelector(".clip-path-svg defs");
-
-    cards.forEach((card, index) => {
-
-      /*
-       * Give this card its own clip-path.
-       */
-
-      const clipPath = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "clipPath"
-      );
-
-      const path = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-
-      const clipId = `angled-card-clip-${index}`;
-
-      clipPath.setAttribute("id", clipId);
-      clipPath.setAttribute(
-        "clipPathUnits",
-        "userSpaceOnUse"
-      );
-
-      clipPath.appendChild(path);
-      defs.appendChild(clipPath);
-
-
-      /*
-       * Apply this particular clip-path to the card.
-       */
-
-      card.style.clipPath = `url("#${clipId}")`;
-
-
-      /*
-       * Update its geometry whenever the component changes size.
-       */
-
-      const updateClipPath = () => {
-
-        const width = card.offsetWidth;
-        const height = card.offsetHeight;
-
-        path.setAttribute(
-          "d",
-          createClipPath(width, height)
-        );
-      };
-
-
-      /*
-       * ResizeObserver means we don't need to listen for
-       * window resize events.
-       *
-       * It also catches changes caused by:
-       *
-       * - CSS Grid
-       * - Flexbox
-       * - container resizing
-       * - media queries
-       * - content changes
-       * - viewport resizing
-       */
-
-      const observer = new ResizeObserver(updateClipPath);
-
-      observer.observe(card);
-
-
-      /*
-       * Generate the initial path immediately.
-       */
-
-      updateClipPath();
-    });
-  </script>
 
 </body>
 </html>
