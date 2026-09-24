@@ -46,10 +46,22 @@
   flex-direction: column;
   gap: var(--space--300);
   padding: var(--card--padding);
-  border: calc(var(--border-width--200) * 1px) solid var(--colour--border-contrast);
+  border: calc(var(--border-width--200) * 1px) solid var(--colour--border-strong);
   border-radius: var(--border-radius--150);
   background: var(--colour--background-primary);
+
+/* Interaction */
+cursor: pointer;
+transition: background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
 }
+
+.course-card:hover,
+.course-card:focus-visible {
+  border-color: var(--colour--border-contrast);
+  background-color: var(--colour--neutral-900);
+  transform: scale(1.02);
+}
+
 
 .course-card__badge {
   display: flex;

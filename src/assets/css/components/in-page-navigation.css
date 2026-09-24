@@ -20,7 +20,74 @@
   max-width: var(--width--content--max);
 }
 
+/* ----------------------------------
+    Clipped card
+    ---------------------------------- */
+
 .in-page-navigation__card {
+  display: flex;
+  flex-direction: column;
+  
+  position: relative;
+  width: min(100%, 480px);
+  padding: var(--card--padding-spacious);
+  gap: var(--space--250);
+  background: var(--in-page-navigation--colour-background);
+  overflow: hidden;
+  
+  --corner-radius: var(--border-radius--150);
+  --cut-size: 41px;
+
+  clip-path: shape(
+
+    /* Start after top-left radius */
+    from var(--corner-radius) 0,
+
+    /* Top edge */
+    line to calc(100% - var(--cut-size)) 0,
+
+    /* Curve into diagonal */
+    curve to calc(100% - 32.818px) 3.498px
+      with calc(100% - 35.067px) 1.258px
+      / calc(100% - 38.112px) 0,
+
+    /* Diagonal edge */
+    line to calc(100% - 3.532px) 32.667px,
+
+    /* Curve into right edge */
+    curve to 100% 41.169px
+      with calc(100% - 1.271px) 34.919px
+      / 100% 37.978px,
+
+    /* Right edge */
+    line to 100% calc(100% - var(--corner-radius)),
+
+    /* Bottom-right corner */
+    curve to calc(100% - var(--corner-radius)) 100%
+      with 100% calc(100% - 4.477px)
+      / calc(100% - 4.477px) 100%,
+
+    /* Bottom edge */
+    line to var(--corner-radius) 100%,
+
+    /* Bottom-left corner */
+    curve to 0 calc(100% - var(--corner-radius))
+      with 4.477px 100%
+      / 0 calc(100% - 4.477px),
+
+    /* Left edge */
+    line to 0 var(--corner-radius),
+
+    /* Top-left corner */
+    curve to var(--corner-radius) 0
+      with 0 4.477px
+      / 4.477px 0,
+
+    close
+  );
+}
+
+/*.in-page-navigation__card-svg-corner {
   display: flex;
   flex-direction: column;
   
@@ -39,7 +106,7 @@
   top: 0;
   right: 0;
   z-index: 1;
-}
+}*/
 
 .in-page-navigation__heading {
   margin: 0;

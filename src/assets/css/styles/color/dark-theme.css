@@ -183,13 +183,14 @@
 
 /* Border colours */
 
- --colour--border-placeholder-update: var(--colour--pink-400);
-  --colour--border-subtle: var(--colour--neutral-800);
+  --colour--border-placeholder-update: var(--colour--pink-400);
+    --colour--border-subtle: var(--colour--neutral-800);
   --colour--border-subtle_hover: var(--colour--neutral-600);
   --colour--border-muted: var(--colour--neutral-700);
   --colour--border-muted_hover: var(--colour--neutral-500);
+  --colour--border-bold: var(--colour--neutral-600);
+  --colour--border-strong: var(--colour--neutral-500);
   --colour--border-contrast: var(--colour--white);
-  --colour--border-strong: var(--colour-alpha--white-72);
   --colour--border-disabled: var(--colour--neutral-600);
   --colour--border-disabled-subtle: var(--colour--neutral-700);
   --colour--border-onContrast-disabled: var(--colour--neutral-300);
